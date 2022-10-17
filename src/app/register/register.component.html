@@ -1,0 +1,61 @@
+<section class="mt-3">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 mx-auto">
+                <div class="card shadow-lg">
+                    <div class="card-header">
+                        <h3 class="mb-0">Register</h3>
+                    </div>
+                    <div class="card-body">
+                        <form [formGroup]="registerUserData" (ngSubmit)="userRegister(registerUserData.value)">
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label for="">First Name</label>
+                                    <input type="text" placeholder="fname" formControlName="first_name"
+                                        class="form-control rounded-0">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="">Last Name</label>
+                                    <input type="text"  placeholder="lname" formControlName="last_name"
+                                        class="form-control rounded-0">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label for="">Email</label>
+                                    <input type="email"  placeholder="email" formControlName="email"
+                                        class="form-control rounded-0">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="">Password</label>
+                                    <input type="password" name="email" placeholder="password"
+                                        formControlName="password" class="form-control rounded-0">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label for="">Contact</label>
+                                    <input type="number"  placeholder="Contact" formControlName="phone_number"
+                                        class="form-control rounded-0">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="">Company</label>
+                                    <select class="form-control" id="exampleFormControlSelect1"
+                                        formControlName="companyId">
+                                        <option selected>----select-----</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <button type="submit"  class="btn btn-primary float-right">
+                                Register</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

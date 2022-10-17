@@ -1,0 +1,80 @@
+
+<section class="mt-5">
+    <div class="container">
+       
+        <div class="row">
+          
+           
+            <div class="col-md-10 mx-auto">
+                <div class="d-grid gap-2 d-md-flex justify-content-md-end mb-2">
+                    <p class="mr-auto lead"> City Table Data</p>
+                    <button class="btn btn-primary me-md-2" type="button"  data-toggle="modal" data-target="#exampleModalCenter">+ Add City </button>
+                    <!-- <button class="btn btn-primary" type="button">Button</button> -->
+                  </div>
+                <div class="card">
+                      <table class="table">
+            <thead class="bg-primary text-white">
+              <tr>
+                <th scope="col">S.Number</th>
+                <th scope="col">Country Name</th>
+                <th scope="col">City Name</th>
+                <th scope="col">Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let city of cities let i = index;">
+                <th scope="row">{{ i +1}}</th>
+                <td>{{city.country.country_name}}</td>
+                <td>{{city.city_name}}</td>
+                <td>
+                    <button type="button" class="btn btn-outline-success ">
+                        <i class="fas fa-magic"></i></button>&nbsp;
+                    <button type="button" class="btn  btn-danger" data-mdb-ripple-color="dark">
+                    <i class="fas fa-trash"></i>
+                  </button>
+                  
+                </td>
+      
+              </tr>
+              <!-- <tr>
+                <th scope="row">2</th>
+                <td>Jacob</td>
+                <td>Thornton</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td>Larry</td>
+                <td>the Bird</td>
+              </tr> -->
+            </tbody>
+          </table>
+                </div>
+            </div>
+        </div>
+      
+    </div>
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLongTitle">Add City</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                      <label for="exampleInputEmail1">Country Name</label>
+                      <input type="text" class="form-control"  aria-describedby="emailHelp" placeholder="Enter Country" formControlName="country">
+                    </div>
+                  </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="submit" class="btn btn-primary">Save country</button>
+            </div>
+          </div>
+        </div>
+      </div>
+</section>

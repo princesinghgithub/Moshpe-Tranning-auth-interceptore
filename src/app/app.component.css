@@ -1,0 +1,21 @@
+element.style {
+    width: 240px;
+    height: 100%;
+    position: absolute;
+    transition: all 0.3s linear 0s;
+}
+.documentation .sidenav {
+    z-index: 1029;
+}
+.sidenav {
+    top: 0;
+    left: 0;
+    transform: translateX(-100%);
+    position: fixed;
+    z-index: 1035;
+    background-color: #fff;
+    overflow: hidden;
+    width: 240px;
+    height: 100vh;
+    box-shadow: 0 4px 12px 0 rgba(0,0,0,.07),0 2px 4px rgba(0,0,0,.05);
+}
